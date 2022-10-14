@@ -6,6 +6,8 @@ import time
 def main():
     server, port, mailAddress, passwd, maxAttachments = init.returnVals()
     path = init.attachmentsDir()
+    system = init.detectOS()
+    print(f'system: {system}')
     init.attachmentsCSV()
 
     while True:

@@ -1,5 +1,6 @@
 from genericpath import isdir
 import os
+import platform
 
 def returnVals():
     path = os.path.dirname(os.getcwd()) + '\config.cfg'
@@ -23,5 +24,8 @@ def attachmentsCSV():
         with open('attachments.csv','w') as attachments:
             attachments.write('')
 
+def detectOS():
+    return platform.system()
+
 if __name__ == '__main__':
-    print(attachmentsDir())
+    print(detectOS())
